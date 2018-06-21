@@ -1,6 +1,6 @@
 package com.lucifiere.crawler.wrap
 
-import com.lucifiere.entity.HousingEstate
+import com.lucifiere.entity.vo.HousingEstate
 
 /**
  * Created by @author XD.Wang

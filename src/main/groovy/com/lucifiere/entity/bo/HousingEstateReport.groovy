@@ -1,4 +1,4 @@
-package com.lucifiere.entity
+package com.lucifiere.entity.bo
 
 import com.lucifiere.constants.ReportResult
 
@@ -14,6 +14,8 @@ class HousingEstateReport {
     private String remark
 
     private ReportResult result
+
+    private List<BuildingReport> buildingReports
 
     HousingEstateReport() {}
 
@@ -45,6 +47,14 @@ class HousingEstateReport {
 
     void setResult(ReportResult result) {
         this.result = result
+    }
+
+    List<BuildingReport> getBuildingReports() {
+        return buildingReports
+    }
+
+    void setBuildingReports(List<BuildingReport> buildingReports) {
+        this.buildingReports = buildingReports
     }
 
     static HousingEstateReport suc() {

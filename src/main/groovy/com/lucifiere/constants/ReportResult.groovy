@@ -9,7 +9,7 @@ enum ReportResult {
 
     SUCCESS(1, "report generate success!"),
 
-    BIZ_ERROR(2, "report generate failed! cause by biz error"),
+    BIZ_ERROR(2, "report generate failed! cause by report error"),
 
     INTERNAL_ERROR(3, "report generate failed! cause by programing error")
 

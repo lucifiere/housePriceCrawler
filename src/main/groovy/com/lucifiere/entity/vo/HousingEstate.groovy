@@ -1,4 +1,4 @@
-package com.lucifiere.entity
+package com.lucifiere.entity.vo
 
 /**
  * Created by @author XD.Wang

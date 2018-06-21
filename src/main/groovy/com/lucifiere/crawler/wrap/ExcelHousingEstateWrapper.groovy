@@ -2,9 +2,9 @@ package com.lucifiere.crawler.wrap
 
 import com.lucifiere.crawler.download.Downloader
 import com.lucifiere.crawler.download.ExcelDownloader
-import com.lucifiere.entity.Building
-import com.lucifiere.entity.Household
-import com.lucifiere.entity.HousingEstate
+import com.lucifiere.entity.vo.Building
+import com.lucifiere.entity.vo.Household
+import com.lucifiere.entity.vo.HousingEstate
 import org.apache.poi.ss.usermodel.Row
 import org.apache.poi.ss.usermodel.Sheet
 import org.apache.poi.ss.usermodel.Workbook
