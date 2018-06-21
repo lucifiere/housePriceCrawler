@@ -1,22 +1,21 @@
-package entity
+package com.lucifiere.entity
 
 /**
- * 楼盘
+ * 楼栋
  */
-class HousingEstate {
-
-    private String name
+class Building {
 
     private Integer no
 
     private List<Household> households
 
-    String getName() {
-        return name
+    Building() {
+
     }
 
-    void setName(String name) {
-        this.name = name
+    Building(Integer no, List<Household> households) {
+        this.no = no
+        this.households = households
     }
 
     Integer getNo() {
@@ -34,4 +33,5 @@ class HousingEstate {
     void setHouseholds(List<Household> households) {
         this.households = households
     }
+
 }

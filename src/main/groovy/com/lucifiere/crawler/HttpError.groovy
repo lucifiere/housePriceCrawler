@@ -1,4 +1,4 @@
-package http
+package com.lucifiere.crawler
 
 enum HttpError {
 

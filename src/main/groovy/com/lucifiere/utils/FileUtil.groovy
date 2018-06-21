@@ -1,11 +1,11 @@
-package utils
+package com.lucifiere.utils
 
 import java.nio.charset.Charset
 import java.text.SimpleDateFormat
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 
-final class ZipUtil {
+final class FileUtil {
 
     public static final String ZIP_DIR = "src/main/resources/tmpZip/"
 

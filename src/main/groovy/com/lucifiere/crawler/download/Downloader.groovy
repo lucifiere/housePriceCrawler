@@ -1,8 +1,9 @@
-package http
+package com.lucifiere.crawler.download
 
+import com.lucifiere.crawler.HttpError
 import groovyx.net.http.HTTPBuilder
 import org.apache.http.conn.EofSensorInputStream
-import utils.HttpUtil
+import com.lucifiere.utils.HttpUtil
 
 import static groovyx.net.http.ContentType.BINARY
 import static groovyx.net.http.Method.GET
