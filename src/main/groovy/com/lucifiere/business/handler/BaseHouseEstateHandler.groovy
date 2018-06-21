@@ -1,7 +1,8 @@
 package com.lucifiere.business.handler
 
-import com.lucifiere.entity.HousingEstateHandleReq
-import com.lucifiere.entity.HousingEstateHandleResp
+import com.lucifiere.entity.vo.HousingEstateHandleReq
+import com.lucifiere.entity.vo.HousingEstateHandleResp
+
 
 abstract class BaseHouseEstateHandler {
 

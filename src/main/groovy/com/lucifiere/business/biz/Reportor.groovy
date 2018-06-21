@@ -1,8 +1,9 @@
 package com.lucifiere.business.biz
 
-import com.lucifiere.entity.HousingEstateHandleReq
-import com.lucifiere.entity.HousingEstateHandleResp
-import com.lucifiere.entity.HousingEstateReport
+import com.lucifiere.entity.bo.HousingEstateReport
+import com.lucifiere.entity.vo.HousingEstateHandleReq
+import com.lucifiere.entity.vo.HousingEstateHandleResp
+
 
 class Reportor {
 
