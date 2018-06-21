@@ -4,9 +4,9 @@ import com.lucifiere.core.handler.HandlerChainFactory
 import com.lucifiere.entity.bo.HousingEstateReport
 import com.lucifiere.entity.vo.HousingEstateHandleResp
 
-class XianPriceBureauReportor extends Reporter {
+class XianPriceBureauReporter extends Reporter {
 
-    XianPriceBureauReportor() {
+    XianPriceBureauReporter() {
         firstHandler = HandlerChainFactory.chainForPriceBureauHandler()
     }
 
