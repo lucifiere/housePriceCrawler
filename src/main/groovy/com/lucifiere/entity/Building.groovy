@@ -11,9 +11,7 @@ class Building {
 
     private List<Household> households
 
-    Building() {
-
-    }
+    Building() {}
 
     Building(Integer no, List<Household> households) {
         this.no = no

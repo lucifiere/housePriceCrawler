@@ -1,4 +1,4 @@
-package com.lucifiere.crawler
+package com.lucifiere.constants
 
 /**
  * Created by @author XD.Wang

@@ -11,9 +11,7 @@ class HousingEstate {
 
     private List<Building> buildings
 
-    HousingEstate() {
-
-    }
+    HousingEstate() {}
 
     HousingEstate(String name, List<Building> buildings) {
         this.name = name

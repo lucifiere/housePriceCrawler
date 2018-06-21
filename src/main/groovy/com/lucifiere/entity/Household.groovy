@@ -17,9 +17,7 @@ class Household {
 
     private Float acreage
 
-    Household() {
-
-    }
+    Household() {}
 
     Household(Integer id, Integer no, BigDecimal unitPrice, BigDecimal totalPrice, Float acreage) {
         this.id = id
