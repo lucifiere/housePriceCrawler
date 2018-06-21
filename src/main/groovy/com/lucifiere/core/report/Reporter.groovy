@@ -5,6 +5,11 @@ import com.lucifiere.entity.vo.HousingEstateHandleReq
 import com.lucifiere.entity.vo.HousingEstateHandleResp
 import com.lucifiere.entity.bo.HousingEstateReport
 
+/**
+ * Created by @author XD.Wang
+ * 2018-06-11
+ * Func:报告生成
+ */
 abstract class Reporter {
 
     protected BaseHouseEstateHandler firstHandler
