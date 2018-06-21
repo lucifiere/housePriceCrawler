@@ -2,6 +2,8 @@ package com.lucifiere.entity.bo
 
 class BuildingReport {
 
+    private Integer no
+
     private BigDecimal totalPrice
 
     private List<Float> acreage
@@ -20,5 +22,13 @@ class BuildingReport {
 
     void setAcreage(List<Float> acreage) {
         this.acreage = acreage
+    }
+
+    Integer getNo() {
+        return no
+    }
+
+    void setNo(Integer no) {
+        this.no = no
     }
 }
