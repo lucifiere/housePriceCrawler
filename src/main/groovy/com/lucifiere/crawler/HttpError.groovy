@@ -1,5 +1,10 @@
 package com.lucifiere.crawler
 
+/**
+ * Created by @author XD.Wang
+ * 2018-06-11
+ * Func:
+ */
 enum HttpError {
 
     NOT_FOUND(404, "resource not found"),

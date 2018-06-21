@@ -1,7 +1,9 @@
 package com.lucifiere.entity
 
 /**
- * 楼户
+ * Created by @author XD.Wang
+ * 2018-06-11
+ * Func:楼户
  */
 class Household {
 

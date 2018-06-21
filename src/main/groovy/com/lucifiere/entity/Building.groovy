@@ -1,7 +1,9 @@
 package com.lucifiere.entity
 
 /**
- * 楼栋
+ * Created by @author XD.Wang
+ * 2018-06-11
+ * Func:楼栋
  */
 class Building {
 

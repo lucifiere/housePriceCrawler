@@ -8,15 +8,20 @@ import com.lucifiere.utils.HttpUtil
 import static groovyx.net.http.ContentType.BINARY
 import static groovyx.net.http.Method.GET
 
+/**
+ * Created by @author XD.Wang
+ * 2018-06-11
+ * Func:
+ */
 abstract class Downloader {
 
-    HTTPBuilder site
+    protected HTTPBuilder site
 
-    List<String> path = []
+    private String path = ""
 
-    byte[] raw
+    protected Byte[] data
 
-    HttpError error
+    protected HttpError error
 
     Downloader(String url) {
         url = HttpUtil.completeHttpSchema(url)
@@ -24,27 +29,17 @@ abstract class Downloader {
     }
 
     Downloader path(String path) {
-        this.path << path
+        this.path = path
         this
     }
 
-    Downloader paths(List<String> path) {
-        this.path.addAll(path)
-        this
-    }
-
-    Downloader paths(String... path) {
-        this.path.addAll(path)
-        this
-    }
-
-    void download() {
+    protected void download() {
         site.request(GET, BINARY) { req ->
-            uri.path = path[0]
+            uri.path = path
             response.success = { resp, data ->
                 assert resp.statusLine.statusCode == 200
                 EofSensorInputStream stream = ((data as EofSensorInputStream))
-                raw = stream.bytes
+                this.data = stream.bytes
             }
 
             site.handler.'404' = { resp ->
@@ -65,6 +60,12 @@ abstract class Downloader {
         }
     }
 
-    byte[] read() { raw }
+    protected boolean isDataReady() {
+        return this.error == null && this.data != null && this.data.size() > 0
+    }
+
+    protected Byte[] read() { data }
+
+    abstract boolean build()
 
 }
