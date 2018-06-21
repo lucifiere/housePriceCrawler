@@ -7,8 +7,14 @@ package com.lucifiere.entity.vo
  */
 class HousingEstate {
 
+    /**
+     * 楼盘名称
+     */
     private String name
 
+    /**
+     * 该楼盘下所有的楼栋
+     */
     private List<Building> buildings
 
     HousingEstate() {}

@@ -7,14 +7,29 @@ package com.lucifiere.entity.vo
  */
 class Household {
 
+    /**
+     * 楼户房号
+     */
     private Integer id
 
+    /**
+     * 楼户序号
+     */
     private Integer no
 
+    /**
+     * 此户的单价
+     */
     private BigDecimal unitPrice
 
+    /**
+     * 此户的总价
+     */
     private BigDecimal totalPrice
 
+    /**
+     * 此户的面积
+     */
     private Float acreage
 
     Household() {}
