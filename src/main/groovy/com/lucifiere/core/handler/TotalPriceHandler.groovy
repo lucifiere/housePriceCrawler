@@ -11,19 +11,19 @@ class TotalPriceHandler extends BaseHouseEstateHandler {
         List<BuildingReport> buildingReports = new ArrayList<>()
 
         //遍历楼盘
-        for (List<Building> buildingList : housingEstates) {
+        for (HousingEstate housingEstate : housingEstates) {
             BuildingReport buildingReport = new BuildingReport()
             //遍历楼栋
-            for (List<Household> householdList : buildingList) {
+            for (Building building : housingEstate.getBuildings()) {
                 BigDecimal numPrice
                 List<Float> acreageList = new ArrayList()
 
-                for (Household household : householdList) {
+                for (Household household : building.getHouseholds()) {
                     numPrice += household.getTotalPrice()
                     acreageList.add(household.getAcreage())
                 }
                 buildingReport.setAcreage()
-                buildingReport.setTotalPrice(numPrice / householdList.size())
+                buildingReport.setTotalPrice(numPrice / building.getHouseholds().size())
             }
             buildingReports.add(buildingReport)
         }
