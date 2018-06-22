@@ -33,21 +33,27 @@ class ExcelDownloader extends Downloader {
     boolean build() {
         super.download()
         if (isDataReady()) {
+            File file = FileUtil.createFile(super.data, FileUtil.TMP_ZIP)
             if (isZip()) {
-                FileUtil.unZip()
+                FileUtil.unZip(file)
+                file = new File(FileUtil.WORKSPACE)
             }
-            File baseDir = new File(FileUtil.ZIP_DIR)
-            if (baseDir.isDirectory()) {
-                baseDir.eachFileMatch(FileType.FILES, ~/.*\.xlsx/) {
-                    BufferedInputStream stream = new BufferedInputStream(new FileInputStream(it))
-                    POIFSFileSystem fs = new POIFSFileSystem(stream)
-                    HSSFWorkbook workbook = new HSSFWorkbook(fs)
-                    this.excels << workbook
+            if (file.isDirectory()) {
+                file.eachFileMatch(FileType.FILES, ~/.*\.xlsx/) {
+                    this.excels << buildWorkbook(it)
                 }
-                return true
+            } else {
+                this.excels << buildWorkbook(file)
             }
+            return true
         }
         false
+    }
+
+    private static HSSFWorkbook buildWorkbook(File file) {
+        BufferedInputStream stream = new BufferedInputStream(new FileInputStream(file))
+        POIFSFileSystem fs = new POIFSFileSystem(stream)
+        new HSSFWorkbook(fs)
     }
 
     List<Workbook> getExcels() { excels }

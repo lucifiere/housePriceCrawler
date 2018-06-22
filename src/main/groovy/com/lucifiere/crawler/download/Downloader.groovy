@@ -19,7 +19,7 @@ abstract class Downloader {
 
     private String path = ""
 
-    protected Byte[] data
+    protected byte[] data
 
     protected HttpError error
 
