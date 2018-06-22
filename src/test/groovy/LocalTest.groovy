@@ -15,4 +15,10 @@ class LocalTest {
         println("")
     }
 
+    @Test
+    void test() {
+        def a = [1, 1, 1, 1, 1, 1, 1, 1]
+        println(a.stream().reduce { x, y -> x + y }.orElse(0))
+    }
+
 }
