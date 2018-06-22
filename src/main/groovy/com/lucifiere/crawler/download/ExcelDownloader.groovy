@@ -15,6 +15,16 @@ class ExcelDownloader extends Downloader {
 
     private List<Workbook> excels = []
 
+    private Boolean isZip = true
+
+    Boolean isZip() {
+        return isZip
+    }
+
+    void setZip(Boolean isZip) {
+        this.isZip = isZip
+    }
+
     ExcelDownloader(String url) {
         super(url)
     }
@@ -23,6 +33,9 @@ class ExcelDownloader extends Downloader {
     boolean build() {
         super.download()
         if (isDataReady()) {
+            if (isZip()) {
+                FileUtil.unZip()
+            }
             File baseDir = new File(FileUtil.ZIP_DIR)
             if (baseDir.isDirectory()) {
                 baseDir.eachFileMatch(FileType.FILES, ~/.*\.xlsx/) {
