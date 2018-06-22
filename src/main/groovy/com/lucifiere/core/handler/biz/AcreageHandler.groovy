@@ -1,5 +1,6 @@
-package com.lucifiere.core.handler
+package com.lucifiere.core.handler.biz
 
+import com.lucifiere.core.handler.BaseHouseEstateHandler
 import com.lucifiere.entity.bo.BuildingReport
 import com.lucifiere.entity.vo.HousingEstate
 import com.lucifiere.entity.vo.HousingEstateHandleReq
