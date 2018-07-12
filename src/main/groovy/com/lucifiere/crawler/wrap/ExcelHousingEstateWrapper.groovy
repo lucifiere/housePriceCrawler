@@ -2,18 +2,14 @@ package com.lucifiere.crawler.wrap
 
 import com.lucifiere.crawler.download.Downloader
 import com.lucifiere.crawler.download.ExcelDownloader
-import com.lucifiere.entity.vo.Building
-import com.lucifiere.entity.vo.Household
 import com.lucifiere.entity.vo.HousingEstate
-import org.apache.poi.ss.usermodel.Row
-import org.apache.poi.ss.usermodel.Sheet
 import org.apache.poi.ss.usermodel.Workbook
 
 import java.util.stream.Collectors
 
 /**
  * Created by @author XD.Wang
- * 2018-06-11
+ * 2018-03-31
  * Func:
  */
 abstract class ExcelHousingEstateWrapper implements HousingEstateWrapper {

@@ -14,4 +14,5 @@ class HousingEstateHandleResp {
     void setBuildingReports(List<BuildingReport> buildingReports) {
         this.buildingReports = buildingReports
     }
+
 }

@@ -2,7 +2,7 @@ package com.lucifiere.constants
 
 /**
  * Created by @author XD.Wang
- * 2018-06-11
+ * 2018-03-31
  * Func:
  */
 enum HttpError {

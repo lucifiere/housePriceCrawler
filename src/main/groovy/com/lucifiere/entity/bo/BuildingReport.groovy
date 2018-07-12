@@ -31,4 +31,5 @@ class BuildingReport {
     void setNo(Integer no) {
         this.no = no
     }
+
 }

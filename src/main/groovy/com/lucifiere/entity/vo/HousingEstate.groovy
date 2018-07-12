@@ -2,7 +2,7 @@ package com.lucifiere.entity.vo
 
 /**
  * Created by @author XD.Wang
- * 2018-06-11
+ * 2018-03-31
  * Func:楼盘信息
  */
 class HousingEstate {

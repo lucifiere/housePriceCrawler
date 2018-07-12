@@ -1,52 +1,22 @@
 package com.lucifiere.entity.bo
 
-import com.lucifiere.constants.ReportResult
+import com.lucifiere.constants.JobResEnum
 
 /**
  * Created by @author XD.Wang
- * 2018-06-11
+ * 2018-03-31
  * Func:楼盘报告
  */
-class HousingEstateReport {
-
-    private boolean suc
-
-    private String remark
-
-    private ReportResult result
+class HousingEstateReport extends JobResult {
 
     private List<BuildingReport> buildingReports
 
-    HousingEstateReport() {}
-
-    HousingEstateReport(boolean suc, String remark, ReportResult result) {
-        this.suc = suc
-        this.remark = remark
-        this.result = result
+    HousingEstateReport() {
+        super()
     }
 
-    boolean getSuc() {
-        return suc
-    }
-
-    void setSuc(boolean suc) {
-        this.suc = suc
-    }
-
-    String getRemark() {
-        return remark
-    }
-
-    void setRemark(String remark) {
-        this.remark = remark
-    }
-
-    ReportResult getResult() {
-        return result
-    }
-
-    void setResult(ReportResult result) {
-        this.result = result
+    HousingEstateReport(boolean suc, String remark, JobResEnum result) {
+        super(suc, remark, result)
     }
 
     List<BuildingReport> getBuildingReports() {
@@ -55,18 +25,6 @@ class HousingEstateReport {
 
     void setBuildingReports(List<BuildingReport> buildingReports) {
         this.buildingReports = buildingReports
-    }
-
-    static HousingEstateReport suc() {
-        return new HousingEstateReport(Boolean.TRUE, "成功生成了报告！", ReportResult.SUCCESS)
-    }
-
-    static HousingEstateReport fail() {
-        return new HousingEstateReport(Boolean.FALSE, "报告生成失败！", ReportResult.BIZ_ERROR)
-    }
-
-    static HousingEstateReport err(Throwable e) {
-        return new HousingEstateReport(Boolean.FALSE, e.getMessage(), ReportResult.INTERNAL_ERROR)
     }
 
 }
